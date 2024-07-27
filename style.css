@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(3, 111, 65);
+}
+.container{
+    width: 430px;
+    border-radius: 10px;
+    background-color: rgb(7, 26, 0);
+    box-shadow: 0 10px 20px black;
+}
+.container h2{
+    font-weight: 600;
+    font-size: 21px;
+    padding: 16px 30px;
+    border-bottom: 1px solid white;
+    align-items: center;
+}
+.wrapper{
+    margin: 20px 30px;
+}
+.input-box{
+    position: relative;
+}
+.input-box input{
+    width: 100%;
+    height: 52px;
+    background: none;
+    color: aliceblue;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 1.4px;
+    border: 1px solid black;
+    padding: 0 48px 0 16px;
+}
+.input-box span{
+    position: absolute;
+    cursor: pointer;
+    right: 13px;
+    line-height: 53px;
+    color: white;
+}
+.input-box span:hover{
+    color: rgb(103, 61, 182) !important;
+}
+.pass-indicator{
+    width: 100%;
+    height: 4px;
+    position: relative;
+    margin-top: 12px;
+    border-radius: 25px;
+    background: rgb(81, 81, 81);
+}
+.pass-indicator::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+.pass-indicator#weak::before{
+    width: 20%;
+    background-color: red;
+}
+.pass-indicator#medium::before{
+    width: 50%;
+    background-color: yellow;
+}
+.pass-indicator#strong::before{
+    width: 100%;
+    background-color: green;
+}
+.pass-length{
+    margin: 25px 0 20px;
+}
+.pass-length .details{
+    display: flex;
+    justify-content: space-between;
+}
+.pass-length input{
+    width: 100%;
+    height: 5px;
+}
+.pass-settings .options{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.pass-settings .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50%;
+
+}
+.options .option:first-child{
+    pointer-events: none;
+}
+
+.options .option:first-child input{
+    opacity: 0.7;
+}
+.options .option input{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.options .option label{
+    cursor: pointer;
+    padding-left: 16px;
+    color: #e7e7e7;
+}
+.generator-btn{
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 15px 0 ;
+    margin: 15px 0 20px;
+    border-radius: 5px;
+    background-color: rgb(73, 73, 73);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.generator-btn:hover{
+    background: rgb(0, 0, 0);
+}
+.generator-btn:active{
+    transform: scale(0.95);
+}
